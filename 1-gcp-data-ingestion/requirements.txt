@@ -1,0 +1,5 @@
+functions-framework==3.5.0
+kagglehub==0.2.8
+pandas==2.2.0
+sqlalchemy
+psycopg2-binary

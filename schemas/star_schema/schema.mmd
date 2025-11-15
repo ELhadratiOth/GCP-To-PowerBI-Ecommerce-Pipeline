@@ -1,0 +1,77 @@
+erDiagram
+
+    FACT_ORDERS {
+        string order_id PK
+        int order_item_id
+        string customer_id FK
+        string seller_id FK
+        string product_id FK
+        int order_purchase_date_id FK
+        int order_delivery_date_id FK
+        string order_status
+        string delivery_delay_flag
+        float item_price
+        float item_freight_value
+        float total_item_amount
+        float total_payment_value
+        int payment_count
+        int max_installments
+        float avg_review_score
+        int total_reviews
+        int delivery_days
+        int is_delivered
+        int is_on_time
+        float profit
+    }
+
+    DIM_CUSTOMERS {
+        string customer_id PK
+        string customer_unique_id
+        string customer_zip_code_prefix
+        string customer_city
+        string customer_state
+        float geolocation_lat
+        float geolocation_lng
+    }
+
+    DIM_SELLERS {
+        string seller_id PK
+        string seller_zip_code_prefix
+        string seller_city
+        string seller_state
+        float geolocation_lat
+        float geolocation_lng
+    }
+
+    DIM_PRODUCTS {
+        string product_id PK
+        string product_category_name
+        string product_category_name_english
+        int product_name_lenght
+        int product_description_lenght
+        int product_photos_qty
+        float product_weight_g
+        float product_length_cm
+        float product_height_cm
+        float product_width_cm
+    }
+
+    DIM_DATE {
+        int date_id PK
+        date full_date
+        int day
+        int month
+        int year
+        int quarter
+        int week_of_year
+        int day_of_week
+        string day_name
+        string month_name
+        int is_weekend
+    }
+
+    %% === Relationships ===
+    DIM_CUSTOMERS ||--o{ FACT_ORDERS : "places"
+    DIM_SELLERS ||--o{ FACT_ORDERS : "fulfills"
+    DIM_PRODUCTS ||--o{ FACT_ORDERS : "includes"
+    DIM_DATE ||--o{ FACT_ORDERS : "occurs_on"
