@@ -497,7 +497,7 @@ For interactive dashboards, data flow diagrams, and ER schema diagrams, see the 
 - ✅ Staging layer (Delta Lake with ACID transactions)
 - ✅ Snowflake star schema (4D + 1F tables)
 - ✅ SQL validation queries (schema integrity checks)
-- ✅ Power BI dashboards (6 pages, 15+ measures)
+- ✅ Power BI dashboards (2 pages, 10+ measures)
 - ✅ Custom columns & measures documentation
 - ✅ Power Query transformations guide
 - ✅ LinkedIn post & repo recommendations
