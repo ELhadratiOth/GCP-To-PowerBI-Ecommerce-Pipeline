@@ -479,6 +479,16 @@ For interactive dashboards, data flow diagrams, and ER schema diagrams, see the 
 - Star schema relationships
 - Geographic analysis maps
 
+#### Power BI Dashboard Pages
+
+**Page 1: E-Commerce Revenue & Growth Analysis (2016-2019)**
+
+![E-Commerce Revenue & Growth Analysis Dashboard](./imgs/dashbaord/page1.png)
+
+**Page 2: Geographic Order Distribution & Seller Performance**
+
+![Geographic Order Distribution & Seller Performance Dashboard](./imgs/dashbaord/page2.png)
+
 ### Completed Components
 
 - ✅ GCP data ingestion (Cloud Functions)
